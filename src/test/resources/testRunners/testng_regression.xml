@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Swaglabs App Test Regression Suite" thread-count="4"
+	parallel="tests" verbose="4">
+
+
+ 	<listeners>  
+ 		<listener 
+ 			class-name="com.swaglabs.listener.ExtentReportListener" /> 
+ 			
+ 			<listener 
+ 			class-name="com.swaglabs.listener.TestAllureListener" /> 
+ 		
+ 	</listeners> 
+
+	<test name="Login Page Test">
+		<classes>
+			<class name="com.swaglabs.testcases.LoginPageTest" />
+		</classes>
+	</test>
+
+	<test name="Home Page Test">
+		<classes>
+			<class name="com.swaglabs.testcases.HomePageTest" />
+		</classes>
+	</test>
+
+	<test name="Cart Page Test">
+		<classes>
+			<class name="com.swaglabs.testcases.CartPageTest" />
+		</classes>
+	</test>
+	
+	<test name="Overview Page Test">
+		<classes>
+			<class name="com.swaglabs.testcases.OverviewPageTest" />
+		</classes>
+	</test>
+
+</suite>
