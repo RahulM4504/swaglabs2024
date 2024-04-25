@@ -54,16 +54,16 @@ public class DriverFactory {
     }
 
     public Properties initProperties() {
-	FileInputStream fis = null;
 	prop = new Properties();
-	String envName = System.getProperty("env").toLowerCase().trim();
+	FileInputStream fis = null;	
+	String envName = System.getProperty("env");
 	System.out.println("Running Tests on " + envName + " env");
 	try {
 	    if (envName == null) {
 		System.out.println("Environment not specified by user hence running tests on QA env");
 		fis = new FileInputStream("./src/main/resources/config/qa.config.properties");
 	    } else {
-		switch (envName) {
+		switch (envName.toLowerCase().trim()) {
 		case "qa":
 		    fis = new FileInputStream("./src/main/resources/config/qa.config.properties");
 		    break;
