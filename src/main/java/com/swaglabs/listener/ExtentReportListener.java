@@ -74,7 +74,6 @@ public class ExtentReportListener implements ITestListener {
 		int last = qualifiedName.lastIndexOf(".");
 		int mid = qualifiedName.substring(0, last).lastIndexOf(".");
 		String className = qualifiedName.substring(mid + 1, last);
-
 		System.out.println(methodName + " started!");
 		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),
 				result.getMethod().getDescription());

@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -56,13 +55,13 @@ public class DriverFactory {
     public Properties initProperties() {
 	prop = new Properties();
 	FileInputStream fis = null;	
-	String envName = System.getProperty("env");
-	System.out.println("Running Tests on " + envName + " env");
+	String envName = System.getProperty("env");	
 	try {
 	    if (envName == null) {
 		System.out.println("Environment not specified by user hence running tests on QA env");
 		fis = new FileInputStream("./src/main/resources/config/qa.config.properties");
 	    } else {
+		System.out.println("Running Tests on " + envName + " env");
 		switch (envName.toLowerCase().trim()) {
 		case "qa":
 		    fis = new FileInputStream("./src/main/resources/config/qa.config.properties");

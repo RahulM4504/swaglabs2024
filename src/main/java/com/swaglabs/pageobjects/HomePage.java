@@ -26,7 +26,7 @@ public class HomePage {
     private By addToCartButton = By.xpath("(//button[contains(text(),'Add to cart')])[1]");
     private By goToCart = By.cssSelector(".shopping_cart_link");
     private By cartBatch = By.cssSelector(".shopping_cart_badge");
-    private By productTitle = By.cssSelector(".inventory_item_name");
+//    private By productTitle = By.cssSelector(".inventory_item_name");
 
     public boolean mainHeadingDisplayed() {
 	return elementUtil.doElementIsDisplayed(pageHeadingMain);
@@ -78,8 +78,8 @@ public class HomePage {
     }
     
     public void checkProductPrice(String prodTitle) {
-	WebElement prodContainer = elementUtil.getElement(productsList);
-	WebElement title = prodContainer.findElement(By.xpath("//div[contains(text(),'"+prodTitle+"')]"));
+//	WebElement prodContainer = elementUtil.getElement(productsList);
+//	WebElement title = prodContainer.findElement(By.xpath("//div[contains(text(),'"+prodTitle+"')]"));
 	
     }
 

@@ -39,7 +39,7 @@ public class HomePageTest extends BaseTest {
     public void VerifyCartLinkNavigation() {
 	homePage.openTheCart();
 	String heading = cartPage.getCartPageSeconderyHeading();
-	Assert.assertEquals(heading, "Your Cart");
+	Assert.assertEquals(heading, "Your Cart 12344444");
     }
 
 }
